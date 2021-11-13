@@ -6,3 +6,4 @@ Python on ainut hallitsemani kieli ja olen TKT opiskelija. Teen kurssin dokument
 
 ## Lähteet
 [Wikipedia, Maze solving algorithm](https://en.wikipedia.org/wiki/Maze-solving_algorithm)
+[Wikipedia, Maze generation algorithm](https://en.wikipedia.org/wiki/Maze_generation_algorithm)
