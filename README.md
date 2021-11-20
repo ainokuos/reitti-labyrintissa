@@ -11,4 +11,4 @@
 
 [Viikkoraportti 2](https://github.com/ainokuos/reitti-labyrintissa/tree/main/Dokumentaatio/viikkoraportit)
 
-[Viikoraportti 3](https://github.com/ainokuos/reitti-labyrintissa/blob/main/Dokumentaatio/viikkoraportit/viikkoraportti3.pdf)
+[Viikkoraportti 3](https://github.com/ainokuos/reitti-labyrintissa/blob/main/Dokumentaatio/viikkoraportit/viikkoraportti3.pdf)
