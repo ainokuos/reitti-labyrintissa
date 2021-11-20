@@ -1,13 +1,27 @@
 import random
 
 class Labyrintti:
+    """Luokka tuottaa labyrintin nxn matriisina annetulla n
+
+        attributes:
+            n: luku, joka määrittää labyrintin koon
+    """
     def __init__(self, n):
+        """ Luoka konstruktori
+        
+            Args:
+                n: labyrintin koko, joka muodostuu nxn
+        """
+
         self.n = n
         self.ruudukko = []
         self.vierailtu = []
         self.edelliset = []
 
     def luo_ruudukko(self):
+        """Metodi, joka luo ruudukon labyrinttia varten
+        """
+
         self.ruudukko = [[]]*self.n
         self.vierailtu = [[]]*self.n
 
@@ -19,6 +33,15 @@ class Labyrintti:
 
 
     def viereiset(self, x, y):
+        """Metodi, joka tutkii tämän hetkisen solmun mahdolliset viereiset solmut
+        
+            Args:
+                x: rivikoordinaatti
+                y: sarakekoordinaatti
+            
+            Returns: 
+                Lista viereisistä solmuista, joissa ei ole vierailtu
+        """
         viereiset = []
 
         if y-2 >= 0:
@@ -43,6 +66,13 @@ class Labyrintti:
         return viereiset
         
     def luo_labyrintti(self, x, y):
+        """Luo labyrintin ruudukkoon
+        
+            Args: 
+                x: rivikoordinaatti
+                y: sarakekoordinaatti
+
+        """
         viereiset = self.viereiset(x, y)
         self.vierailtu[x][y] = 1
 
@@ -65,6 +95,8 @@ class Labyrintti:
         self.luo_labyrintti(reitti[2], reitti[3])
     
     def piirra(self):
+        """Metodi, joka piirtää labyrintin
+        """
         self.luo_ruudukko()
         self.luo_labyrintti(1, 1)
         for k in self.ruudukko:
