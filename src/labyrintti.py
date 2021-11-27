@@ -7,8 +7,8 @@ class Labyrintti:
             n: luku, joka määrittää labyrintin koon
     """
     def __init__(self, n):
-        """ Luoka konstruktori
-        
+        """ Luokan konstruktori
+
             Args:
                 n: labyrintin koko, joka muodostuu nxn
         """
@@ -28,18 +28,18 @@ class Labyrintti:
         for i in range(self.n):
             self.ruudukko[i] = ["#"]*self.n
             self.vierailtu[i] = [0]*self.n
-        
+
         self.ruudukko[1][1] = "."
 
 
     def viereiset(self, x, y):
         """Metodi, joka tutkii tämän hetkisen solmun mahdolliset viereiset solmut
-        
+
             Args:
                 x: rivikoordinaatti
                 y: sarakekoordinaatti
-            
-            Returns: 
+
+            Returns:
                 Lista viereisistä solmuista, joissa ei ole vierailtu
         """
         viereiset = []
@@ -64,15 +64,20 @@ class Labyrintti:
             if self.vierailtu[x-2][y] == 0:
                 viereiset.append(vas)
         return viereiset
-        
+
     def luo_labyrintti(self, x, y):
         """Luo labyrintin ruudukkoon
-        
-            Args: 
+
+            Args:
                 x: rivikoordinaatti
                 y: sarakekoordinaatti
 
         """
+        if self.vierailtu[x][y] == 1:
+            if len(self.edelliset) > 0:
+                edellinen = self.edelliset.pop(-1)
+                self.luo_labyrintti(edellinen[0], edellinen[1])
+                return
         viereiset = self.viereiset(x, y)
         self.vierailtu[x][y] = 1
 
@@ -81,7 +86,7 @@ class Labyrintti:
                 return
             edellinen = self.edelliset.pop(-1)
             self.luo_labyrintti(edellinen[0], edellinen[1])
-        
+
         if len(viereiset) > 1:
             self.edelliset.append((x, y))
 
@@ -91,13 +96,27 @@ class Labyrintti:
 
         self.ruudukko[reitti[0]][reitti[1]] = "."
         self.ruudukko[reitti[2]][reitti[3]] = "."
-        
+
         self.luo_labyrintti(reitti[2], reitti[3])
-    
+
     def piirra(self):
         """Metodi, joka piirtää labyrintin
         """
+        print("Uusi:")
         self.luo_ruudukko()
         self.luo_labyrintti(1, 1)
+        i = 0
+        j = 1
+        while i <= self.n:
+            while j <=self.n:
+                if self.vierailtu[i][j] == 0:
+                    self.luo_labyrintti(i, j)
+                    j +=2
+            i += 1
+
         for k in self.ruudukko:
             print(k)
+        #print(self.vierailtu)
+
+labyrintti = Labyrintti(5)
+labyrintti.piirra()
