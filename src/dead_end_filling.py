@@ -11,6 +11,7 @@ class DeadEndFilling:
                 labyrintti: labyrintti ruudukkona
         """
         self.labyrintti = labyrintti
+        self.koko = len(self.labyrintti)-1
 
     def viereiset(self, x, y):
         """Metodi, joka hakee annetun ruudun mahdolliset viereiset ruudut
@@ -26,13 +27,13 @@ class DeadEndFilling:
         if y-1 >= 0:
             if self.labyrintti[x][y-1] == ".":
                 viereiset.append((x, y-1))
-        if y+1 < 19:
+        if y+1 < self.koko:
             if self.labyrintti[x][y+1] == ".":
                 viereiset.append((x, y+1))
         if x-1 >= 0:
             if self.labyrintti[x-1][y] == ".":
                 viereiset.append((x-1, y))
-        if x+1 < 19:
+        if x+1 < self.koko:
             if self.labyrintti[x+1][y] == ".":
                 viereiset.append((x+1, y))
     
@@ -40,8 +41,8 @@ class DeadEndFilling:
     
     def umpikujat(self):
         """Metodi, joka käy läpi labyrintin ja etsii mahdolliset umpikujat"""
-        for i in range(1, 19):
-            for j in range(1, 19):
+        for i in range(1, self.koko):
+            for j in range(1, self.koko):
                 if self.labyrintti[i][j] == ".":
                     viereiset = self.viereiset(i, j)
                     if len(viereiset) == 1:

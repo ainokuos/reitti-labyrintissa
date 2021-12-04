@@ -72,23 +72,32 @@ class Labyrintti:
                 x: rivikoordinaatti
                 y: sarakekoordinaatti
 
-        """
+        """        
+
+
+
+
         if self.vierailtu[x][y] == 1:
             if len(self.edelliset) > 0:
-                edellinen = self.edelliset.pop(-1)
+                edellinen = self.edelliset.pop(0)
                 self.luo_labyrintti(edellinen[0], edellinen[1])
                 return
+
         viereiset = self.viereiset(x, y)
+
+        if len(viereiset) > 1:
+            self.edelliset.append((x, y))
+   
         self.vierailtu[x][y] = 1
 
+            
         if len(viereiset) == 0:
             if len(self.edelliset) == 0:
                 return
             edellinen = self.edelliset.pop(-1)
             self.luo_labyrintti(edellinen[0], edellinen[1])
 
-        if len(viereiset) > 1:
-            self.edelliset.append((x, y))
+
 
         if len(viereiset) == 0:
             return
@@ -105,18 +114,20 @@ class Labyrintti:
         print("Uusi:")
         self.luo_ruudukko()
         self.luo_labyrintti(1, 1)
-        i = 0
+        i = 1
         j = 1
-        while i <= self.n:
-            while j <=self.n:
+        while i < self.n:
+            while j < self.n:
                 if self.vierailtu[i][j] == 0:
-                    self.luo_labyrintti(i, j)
-                    j +=2
+                    self.edelliset.append((i, j))
+                j += 2
+            j = 1
             i += 1
-
+        print(self.vierailtu)
+        print(self.edelliset)
         for k in self.ruudukko:
             print(k)
-        #print(self.vierailtu)
+        return self.ruudukko
 
-labyrintti = Labyrintti(5)
+labyrintti = Labyrintti(15)
 labyrintti.piirra()
