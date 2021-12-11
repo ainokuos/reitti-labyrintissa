@@ -1,7 +1,12 @@
+![Screenshot from 2021-12-11 22-09-32](https://user-images.githubusercontent.com/80783887/145690205-3f77008e-58a8-4658-a535-09ca0bbaa7cf.png)
 
-![Screenshot from 2021-11-20 19-24-18](https://user-images.githubusercontent.com/80783887/142735644-d399c044-bdb9-417a-bb08-5033de1c17dc.png)
+Ohjelmassa voi nyt ratkaista erikokoisia labyrintteja ja tuloksessa on mukana suorittamiseen kulunut aika.
 
-Pylintin arvosana on 8.89/10
-
-
-Projekti vertailee kahta reitinhakualgoritmia labyrintissa eri kokoisilla syötteillä. Syötteet ovat nxn labyrintteja ja reitinhakua testataan erikokoisilla n. 
+## Dead-end filling algoritmin aikoja:
+| Labyrintin koko | aika sekunteina |
+|:----:|:----:|
+|5 x 5|0.000097|
+|10 x 10|0.00021|
+|20 x 20|0.001805|
+|30 x 30|0.001665|
+|40 x 40|0.002525|
