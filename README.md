@@ -7,8 +7,4 @@
 
 [Testausdokumentti](https://github.com/ainokuos/reitti-labyrintissa/blob/main/Dokumentaatio/Testausdokumentti.md)
 
-[Viikkoraportti 1](https://github.com/ainokuos/tiralabra/blob/main/Dokumentaatio/viikkoraportit/viikkoraportti1.pdf)
-
-[Viikkoraportti 2](https://github.com/ainokuos/reitti-labyrintissa/tree/main/Dokumentaatio/viikkoraportit)
-
-[Viikkoraportti 3](https://github.com/ainokuos/reitti-labyrintissa/blob/main/Dokumentaatio/viikkoraportit/viikkoraportti3.pdf)
+[Viikkoraportti 6](https://github.com/ainokuos/reitti-labyrintissa/blob/main/Dokumentaatio/viikkoraportit/viikkoraportti6.pdf)
