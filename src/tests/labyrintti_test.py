@@ -6,13 +6,13 @@ class TestLabyrintti(unittest.TestCase):
         self.labyrintti = Labyrintti(10)
     
     def test_luo_ruudukko(self):
-        self.labyrintti.luo_ruudukko()
-
         self.assertEqual(len(self.labyrintti.ruudukko), 10)
     
     def test_luo_labyrintti(self):
-        self.labyrintti.luo_ruudukko()
-        self.labyrintti.luo_labyrintti(1, 1)
-
+        self.labyrintti.luo(1, 1)
         self.assertEqual(len(self.labyrintti.ruudukko), 10)
+    
+    def test_aloitusruutu_oikein(self):
+        self.labyrintti.luo(1, 1)
+        self.assertEqual(self.labyrintti.ruudukko[0][1], ".")
 

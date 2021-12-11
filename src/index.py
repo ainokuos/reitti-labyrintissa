@@ -11,9 +11,9 @@ def main():
         toiminto = int(input("Valitse toiminto: "))
 
         if toiminto == 1:
-            labyrintti = Labyrintti(15)
-            DEF = DeadEndFilling(labyrintti.piirra())
-            DEF.umpikujat()
+            koko = int(input("Anna labyrintin koko(n x n): "))
+            labyrintti = Labyrintti(koko)
+            DEF = DeadEndFilling(labyrintti.palauta())
             DEF.palauta()
 
         #if toiminto == 2:
