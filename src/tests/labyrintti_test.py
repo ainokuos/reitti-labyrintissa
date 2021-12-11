@@ -16,3 +16,6 @@ class TestLabyrintti(unittest.TestCase):
         self.labyrintti.luo(1, 1)
         self.assertEqual(self.labyrintti.ruudukko[0][1], ".")
 
+    def test_palauta_labyrintti(self):
+        self.labyrintti.palauta()
+        self.assertEqual(self.labyrintti.ruudukko[1][1], ".")
