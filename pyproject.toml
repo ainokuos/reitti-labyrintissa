@@ -6,6 +6,7 @@ authors = ["ainokuos <aino.kuosmanen@helsinki.fi>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+invoke = "^1.6.0"
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.11.1"

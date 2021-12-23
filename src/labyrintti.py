@@ -88,4 +88,7 @@ class Labyrintti:
         """Metodi, joka palauttaa labyrintin"""
         self.luo(1, 1)
         self.maali()
+        for k in self.ruudukko:
+            print(k)
+        print("")
         return self.ruudukko

@@ -65,9 +65,6 @@ class DeadEndFilling:
 
     def palauta(self):
         """Palauttaa ratkaistun reitin ja suoritusajan"""
-        for k in self.labyrintti:
-            print(k)
-        print('')
 
         alku = datetime.datetime.now()
         self.umpikujat()
@@ -75,4 +72,5 @@ class DeadEndFilling:
 
         for k in self.labyrintti:
             print(k)
-        print(f'Aikaa kului: {loppu-alku}')
+
+        print(f'Aikaa kului DEF: {loppu-alku}')
