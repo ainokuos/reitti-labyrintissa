@@ -6,8 +6,8 @@ class TestDeadEndFilling(unittest.TestCase):
         self.labyrintti =  [['#', '.', '#', '#', '#'],
                             ['#', '.', '#', '.', '#'],
                             ['#', '.', '#', '.', '#'],
-                            ['#', '.', '.', '.', '#'],
-                            ['#', '#', '#', '.', '#']]
+                            ['#', '.', '.', '.', '.'],
+                            ['#', '#', '#', '#', '#']]
         self.DEF = DeadEndFilling(self.labyrintti)
 
     def test_umpikujat(self):

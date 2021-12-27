@@ -27,28 +27,24 @@ class Labyrintti:
                 x: ruudun rivikoordinaatti
                 y: ruudun sarakekoordinaatti
             Returns:
-                lista ruudun vierisistä ruuduista
+                lista ruudun viereisistä ruuduista
         """
         viereiset = []
         if y-1 >= 1:
-            yla = (x, y-1)
             if self.vierailtu[x][y-1] == 0:
-                viereiset.append(yla)
+                viereiset.append((x, y-1))
 
         if y+1 < self.n-1:
-            ala = (x, y+1)
             if self.vierailtu[x][y+1] == 0:
-                viereiset.append(ala)
+                viereiset.append((x, y+1))
 
         if x+1 < self.n-1:
-            oik = (x+1, y)
             if self.vierailtu[x+1][y] == 0:
-                viereiset.append(oik)
+                viereiset.append((x+1, y))
 
         if x-1 >= 1:
-            vas = (x-1, y)
             if self.vierailtu[x-1][y] == 0:
-                viereiset.append(vas)
+                viereiset.append((x-1, y))
         return viereiset
 
     def luo(self, x, y):
