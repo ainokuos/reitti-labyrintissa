@@ -1,6 +1,6 @@
 ![Screenshot from 2021-12-27 23-09-01](https://user-images.githubusercontent.com/80783887/147507425-c082cbdf-c5be-4109-821a-57e94292e9c1.png)
 
-Ohjelmassa voi nyt ratkaista erikokoisia labyrintteja ja tuloksessa on mukana suorittamiseen kulunut aika.
+Ohjelma hakee labyrintista reitin dead-end filling -algoritmilla ja laveyshaulla. Koska labyrintit tuotetaan satunnaistetulla Primin algoritmilla ne ovat ns. täydellisiä labyrintteja eli niissä ei ole silmukoita. Molemmat ratkaisualgoritmit löytävät siis saman reitin, joka on ainut olemassa oleva ratkaisu. Molemmista on testattu, että ne löytävät saman ja oikean polun.
 
 ## Algoritmien aikoja:
 | Labyrintin koko | Dead-end filling |Leveyshaku|
