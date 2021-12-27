@@ -1,8 +1,8 @@
-![Screenshot from 2021-12-11 22-09-32](https://user-images.githubusercontent.com/80783887/145690205-3f77008e-58a8-4658-a535-09ca0bbaa7cf.png)
+![Screenshot from 2021-12-27 23-09-01](https://user-images.githubusercontent.com/80783887/147507425-c082cbdf-c5be-4109-821a-57e94292e9c1.png)
 
 Ohjelmassa voi nyt ratkaista erikokoisia labyrintteja ja tuloksessa on mukana suorittamiseen kulunut aika.
 
-## Dead-end filling algoritmin aikoja:
+## Algoritmien aikoja:
 | Labyrintin koko | Dead-end filling |Leveyshaku|
 |:----:|:----:|:----:|
 |5 x 5|0.000097|0.000111|
