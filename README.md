@@ -7,4 +7,4 @@
 
 [Testausdokumentti](https://github.com/ainokuos/reitti-labyrintissa/blob/main/Dokumentaatio/Testausdokumentti.md)
 
-[Viikkoraportti 6](https://github.com/ainokuos/reitti-labyrintissa/blob/main/Dokumentaatio/viikkoraportit/viikkoraportti6.pdf)
+[Toteutusdokumentti](https://github.com/ainokuos/reitti-labyrintissa/blob/main/Dokumentaatio/Toteutusdokumentti.md)
