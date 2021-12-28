@@ -5,7 +5,7 @@ Ohjelma tuottaa labyrintteja satunnaistetulla Primin algoritmilla luokassa `Laby
 ## Vertailu
 Ohjelmassa vertaillaan ratkaisualgoritmien nopeuksia. Mahdollisilla testattavilla syötteillä voi jo huomata, että leveyshaun käyttämä aika ei kasva yhtä nopeasti kuin dead-end filling:lla. 
 
-Leveyshaku käy labyrintin ja apumatriisin kerran läpi, joten sen aikavaativuus on O(n+m). Dead-end fillin käy labyrintin ensin läpi etsien sen umpikujat, joista se sitten muuraa kunnes löytää polun. Sen aikavaativuus on siis noin O(n).
+Leveyshaku käy labyrintin ja apumatriisin kerran läpi, joten sen aikavaativuus on O(n+m). Dead-end fillin käy labyrintin ensin läpi etsien sen umpikujat, joista se sitten muuraa kunnes löytää polun. Sen aikavaativuus on siis noin O(2n).
 ## Parannuksia
 Labyrinttien toteutus toimii rekursiivisesti ja suurin mahdollinen labyrintin koko on 42 x 42. Suuremmilla syötteillä mahdollinen rekusriosyvyys ylittyy. Tämän voisi todennäköisesti korjata tehostamalla luontiin kätettyä algoritmia,, mutta tapaa en vielä keksinyt.
 
