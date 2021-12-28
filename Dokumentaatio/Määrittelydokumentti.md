@@ -1,12 +1,10 @@
 # Määrittelydokumentti
-Projekti toteutetaan Pythonilla ja sen tavoitteena on selvittää tehokkaasti nopein/lyhin reitti labyrintistä ulos. Vertailen algoritmeja Dead-end filling ja leveyshaku reitin löytämiseen labyrintistä. Leveyshaun aikavaativuus on O(n+m). Ohjelma saa syötteenä labyrintin matriisina ja se palauttaa matriisin, jossa on jäljellä ratkaisu.
-
-Luon labyrintteja käyttäen satunnaistettua Primin algoritmia, jossa ruutuja tallennetaan pinoon.
-
-Python on ainut hallitsemani kieli ja olen TKT opiskelija. Teen kurssin dokumentaation suomeksi.
+Projektin tarkoituksena on vertailla kahta reitinhakualgoritmia labyrintissa. Labyrintit toteutetaan satunnaistetulla Primin algoritmilla, joka tallentaa solun viereisiä seiniä pinoon. Algoritmi tuottaa labyrintteja, joissa ei ole silmukoita, joten ratkaisualgoritmien tarkoitus on löytää ainut olemassa oleva reitti. Labyrintit toteutetaan matriisina, jonka molemmat ratkaisut kätvät läpi. Leveyshaku hakee ensin etäisyydet kaikista saavutettavissa olevista ruuduista taulukkoon, jonka perusteella piirtää ratkaisun labyrinttiin. Leveyshaun aikavaativuus tulisi olla O(n+m). Dead-end filling etsii ensin labyrintin umpikujat ja muuraa umpeen kunnes vastaan tulee polku. 
 
 
 ## Lähteet
 [Wikipedia, Maze solving algorithm](https://en.wikipedia.org/wiki/Maze-solving_algorithm)
 
 [Wikipedia, Maze generation algorithm](https://en.wikipedia.org/wiki/Maze_generation_algorithm)
+
+Tietorakenteet ja algoritmit -kirja, Antti Laaksonen
